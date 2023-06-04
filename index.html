@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Expense</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./app.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="div-1">
+            <div>
+                <img src="./images/expense.png" height="130px" width="200px" alt="" class="image-style">
+            </div>
+            <div>
+                <div class="div-1-2">
+                    <span class="bln">Budget Balance</span>
+                    <br>
+                    <span class="bln-1" id="budgetBln">$0.00</span>
+                </div>
+
+            </div>
+            <div>
+                <img src="./images/amount.png" height="130px" width="200px" alt="" class="image-style">
+            </div>
+
+        </div>
+        <div class="div-1">
+            <div class="div-padding">
+                <div>Remaining Balance</div>
+                <span class="bln-1" id="remAmount">$0.00</span>
+            </div>
+            
+                <div class="box">
+                <div class="box-div">
+                 <input type="number" id="budgetAmount">
+                 <button type="button" onclick="setBudget()">Set Budget</button>
+                </div>
+                   
+                </div>
+            
+            <div class="div-padding">
+                <div>Total Expense</div>
+                <span class="bln-1" id="totalExpense">$0.00</span>
+            </div>
+        </div>
+
+        <div class="last-div">
+            <select name="" id="category">
+                <option value="0">Please Select:</option>
+                <option value="rice">Rice</option>
+                <option value="wheat">Wheat</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+            </select>
+            <input type="text" placeholder="Description" size="10" class="edittext" id="des">
+            <input type="number" placeholder="Enter amount" size="10" class="edittext" id="expenseAmount">
+            <input type="date" size="10" id="date">
+            <button type="button" onclick="setExpense()">Add Expense</button>
+        </div>
+        <div class="inner-div" id="show-div">
+            <table class="table-style">
+                <thead>
+                    <tr>
+                        <th>Categories</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody style="color: white;" id="tablebody">
+                    <!-- <tr>
+                        <td>Resturant</td>
+                        <td>1 large pizza</td>
+                        <td>700</td>
+                        <td>20-8-2022</td>
+                        <td role="group">
+                            <i class="bi bi-pencil-square"></i>&nbsp;&nbsp;                            
+                            <i class="bi bi-trash3"></i>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
